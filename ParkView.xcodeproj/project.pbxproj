@@ -1,0 +1,75 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+5F2EA2997C7EB214A3EECC26 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/AppDelegate.swift"; sourceTree = "<group>"; };
+B8057B9E7718BA2E2DC04D2F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrowserController.swift"; sourceTree = "<group>"; };
+8F213860FC7A532DBD355109 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/CarPlaySceneDelegate.swift"; sourceTree = "<group>"; };
+84C5070A61213D66695FC05D = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Diagnostics.swift"; sourceTree = "<group>"; };
+6F1D3F5E987E7AF4B2DDE16E = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/VideoController.swift"; sourceTree = "<group>"; };
+8A6BA32C9BED6CE703F999F9 = { isa = PBXFileReference; lastKnownFileType = file; path = "Resources/test-pattern.mp4"; sourceTree = "<group>"; };
+245478C0A9BE3F1A58F48660 = { isa = PBXBuildFile; fileRef = 5F2EA2997C7EB214A3EECC26; };
+9810A6CD2096FA20091EF9F1 = { isa = PBXBuildFile; fileRef = B8057B9E7718BA2E2DC04D2F; };
+C65651FAB44EA8755DF1C5F1 = { isa = PBXBuildFile; fileRef = 8F213860FC7A532DBD355109; };
+D75EEA91272DA64A0DCB7606 = { isa = PBXBuildFile; fileRef = 84C5070A61213D66695FC05D; };
+4F285D0AD7E62F272A584720 = { isa = PBXBuildFile; fileRef = 6F1D3F5E987E7AF4B2DDE16E; };
+B9770D4E1AAFA60D149C1EC4 = { isa = PBXBuildFile; fileRef = 8A6BA32C9BED6CE703F999F9; };
+FD964434D872AD9A3F6546CF = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (245478C0A9BE3F1A58F48660, 9810A6CD2096FA20091EF9F1, C65651FAB44EA8755DF1C5F1, D75EEA91272DA64A0DCB7606, 4F285D0AD7E62F272A584720); runOnlyForDeploymentPostprocessing = 0; };
+FBEDB12E0FDEDE83671306C2 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (B9770D4E1AAFA60D149C1EC4); runOnlyForDeploymentPostprocessing = 0; };
+25471E6F3B1B35BB4E58C2AD = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+F4704766FCE88D953949D59A = { isa = PBXFileReference; explicitFileType = wrapper.application; path = "ParkView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+67E644FC437D17522796D549 = { isa = XCBuildConfiguration; name = Debug; buildSettings = {
+            PRODUCT_NAME = "ParkView"; PRODUCT_BUNDLE_IDENTIFIER = "br.parkview.phone";
+            SWIFT_VERSION = 5.0; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2";
+            IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+            INFOPLIST_FILE = Config/Phone-Info.plist; GENERATE_INFOPLIST_FILE = NO;
+            CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+            
+        }; };
+4BBC5E817059B375BD53F566 = { isa = XCBuildConfiguration; name = Release; buildSettings = {
+            PRODUCT_NAME = "ParkView"; PRODUCT_BUNDLE_IDENTIFIER = "br.parkview.phone";
+            SWIFT_VERSION = 5.0; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2";
+            IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+            INFOPLIST_FILE = Config/Phone-Info.plist; GENERATE_INFOPLIST_FILE = NO;
+            CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-O";
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+            
+        }; };
+94EBEEEB689AAC851D370386 = { isa = XCConfigurationList; buildConfigurations = (67E644FC437D17522796D549, 4BBC5E817059B375BD53F566); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+9E0C4F041407A850F4A071A5 = { isa = PBXNativeTarget; buildConfigurationList = 94EBEEEB689AAC851D370386; buildPhases = (FD964434D872AD9A3F6546CF, 25471E6F3B1B35BB4E58C2AD, FBEDB12E0FDEDE83671306C2); buildRules = (); dependencies = (); name = "ParkView"; productName = "ParkView"; productReference = F4704766FCE88D953949D59A; productType = "com.apple.product-type.application"; };
+22B21608F9909F77774EE66E = { isa = PBXBuildFile; fileRef = 5F2EA2997C7EB214A3EECC26; };
+EA825D5355289545D7929284 = { isa = PBXBuildFile; fileRef = B8057B9E7718BA2E2DC04D2F; };
+AAB25B0098910D8A18257124 = { isa = PBXBuildFile; fileRef = 8F213860FC7A532DBD355109; };
+82F2415DDEFF2BD0560A335B = { isa = PBXBuildFile; fileRef = 84C5070A61213D66695FC05D; };
+9F0058310406A1F0E58F3684 = { isa = PBXBuildFile; fileRef = 6F1D3F5E987E7AF4B2DDE16E; };
+FA2B76F855EBD9FA0249D673 = { isa = PBXBuildFile; fileRef = 8A6BA32C9BED6CE703F999F9; };
+7A2478D60874A1323B78CEAE = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (22B21608F9909F77774EE66E, EA825D5355289545D7929284, AAB25B0098910D8A18257124, 82F2415DDEFF2BD0560A335B, 9F0058310406A1F0E58F3684); runOnlyForDeploymentPostprocessing = 0; };
+EE283F91D99C788A13C3D754 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (FA2B76F855EBD9FA0249D673); runOnlyForDeploymentPostprocessing = 0; };
+E30B43729AB94B8DB60AD06E = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+BE23307524DBE6D4F3DC750A = { isa = PBXFileReference; explicitFileType = wrapper.application; path = "ParkViewCarPlay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+88CD2C99D65DC60508BCCD38 = { isa = XCBuildConfiguration; name = Debug; buildSettings = {
+            PRODUCT_NAME = "ParkViewCarPlay"; PRODUCT_BUNDLE_IDENTIFIER = "br.parkview.carplay";
+            SWIFT_VERSION = 5.0; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2";
+            IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+            INFOPLIST_FILE = Config/CarPlay-Info.plist; GENERATE_INFOPLIST_FILE = NO;
+            CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) CARPLAY"; CODE_SIGN_ENTITLEMENTS = Config/CarPlay.entitlements;
+        }; };
+9A0424F51F82E886B4AFBFEA = { isa = XCBuildConfiguration; name = Release; buildSettings = {
+            PRODUCT_NAME = "ParkViewCarPlay"; PRODUCT_BUNDLE_IDENTIFIER = "br.parkview.carplay";
+            SWIFT_VERSION = 5.0; SDKROOT = iphoneos; TARGETED_DEVICE_FAMILY = "1,2";
+            IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+            INFOPLIST_FILE = Config/CarPlay-Info.plist; GENERATE_INFOPLIST_FILE = NO;
+            CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-O";
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) CARPLAY"; CODE_SIGN_ENTITLEMENTS = Config/CarPlay.entitlements;
+        }; };
+1414B14D6C3B766BA4006118 = { isa = XCConfigurationList; buildConfigurations = (88CD2C99D65DC60508BCCD38, 9A0424F51F82E886B4AFBFEA); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+BA97E7919BD5CDFC441B183C = { isa = PBXNativeTarget; buildConfigurationList = 1414B14D6C3B766BA4006118; buildPhases = (7A2478D60874A1323B78CEAE, E30B43729AB94B8DB60AD06E, EE283F91D99C788A13C3D754); buildRules = (); dependencies = (); name = "ParkViewCarPlay"; productName = "ParkViewCarPlay"; productReference = BE23307524DBE6D4F3DC750A; productType = "com.apple.product-type.application"; };
+0A3E27B8CA818264D75C8D81 = { isa = PBXGroup; children = (F4704766FCE88D953949D59A, BE23307524DBE6D4F3DC750A); name = Products; sourceTree = "<group>"; };
+0D6E4079E36703EBD37C0072 = { isa = PBXGroup; children = (5F2EA2997C7EB214A3EECC26, B8057B9E7718BA2E2DC04D2F, 8F213860FC7A532DBD355109, 84C5070A61213D66695FC05D, 6F1D3F5E987E7AF4B2DDE16E, 8A6BA32C9BED6CE703F999F9, 0A3E27B8CA818264D75C8D81); sourceTree = "<group>"; };
+73EBF6644258C120893E685D = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; }; name = Debug; };
+0B0C687DF8B6B8DC790B519C = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; }; name = Release; };
+A964DD4136F390AFDF0E5FBA = { isa = XCConfigurationList; buildConfigurations = (73EBF6644258C120893E685D, 0B0C687DF8B6B8DC790B519C); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+244210E48437B6556980A702 = { isa = PBXProject; attributes = { LastUpgradeCheck = 2700; }; buildConfigurationList = A964DD4136F390AFDF0E5FBA; compatibilityVersion = "Xcode 14.0"; developmentRegion = pt_BR; hasScannedForEncodings = 0; knownRegions = (pt_BR, en, Base); mainGroup = 0D6E4079E36703EBD37C0072; productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (9E0C4F041407A850F4A071A5, BA97E7919BD5CDFC441B183C); };
+}; rootObject = 244210E48437B6556980A702; }

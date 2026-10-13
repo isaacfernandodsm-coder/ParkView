@@ -1,0 +1,56 @@
+name: Gerar IPA para AltStore
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Mostrar Xcode e SDK disponíveis
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
+
+      - name: Compilar variante de iPhone sem assinatura
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f build-ipa-altstore.sh ]]; then
+            TASK_PROJECT="."
+          elif [[ -f ParkView/build-ipa-altstore.sh ]]; then
+            TASK_PROJECT="ParkView"
+          else
+            echo "Não encontrei o projeto. Envie os arquivos extraídos, não apenas o ZIP." >&2
+            exit 1
+          fi
+          bash "$TASK_PROJECT/build-ipa-altstore.sh" 2>&1 | tee build.log
+          mkdir -p artifacts
+          cp "$TASK_PROJECT/Output/ParkView-AltStore.ipa" artifacts/
+          shasum -a 256 artifacts/ParkView-AltStore.ipa > artifacts/SHA256.txt
+
+      - name: Disponibilizar IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: ParkView-AltStore
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Disponibilizar log de compilação
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ParkView-log
+          path: build.log
+          if-no-files-found: ignore
+          retention-days: 7
